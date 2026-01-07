@@ -1,0 +1,41 @@
+# ==================== Python核心忽略 ====================
+# 编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyc
+*.pyo
+# 分发/打包文件
+dist/
+build/
+*.egg-info/
+# ==================== 虚拟环境忽略 ====================
+# Anaconda环境（全局路径，避免误匹配）
+*/anaconda3/envs/
+# 本地虚拟环境
+venv/
+env/
+oppo_env/
+# Conda环境配置
+.conda/
+# ==================== PyCharm忽略 ====================
+.idea/
+*.iml
+*.iws
+*.ipr
+# ==================== 依赖/日志忽略 ====================
+requirements.txt  # 如需追踪依赖可注释此行
+pip-wheel-metadata/
+*.log
+*.tmp
+*.cache
+# ==================== 系统/其他忽略 ====================
+.DS_Store
+Thumbs.db
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+# 测试文件
+tests/__pycache__/
