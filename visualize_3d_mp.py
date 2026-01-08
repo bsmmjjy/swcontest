@@ -14,7 +14,7 @@ matplotlib.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 # ================= 配置区域 =================
 JSON_PATH = r"C:\D\oppo\Yoga-82\yoga_standard_mp.json"
 # 使用 JSON 中正确的动作名称
-TARGET_ACTION = "Tree_Pose_or_Vrksasana_"
+TARGET_ACTION = "Akarna_Dhanurasana"
 # ===========================================
 
 # MediaPipe 官方定义的骨骼连接
