@@ -14,7 +14,7 @@ matplotlib.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 # ================= 配置区域 =================
 JSON_PATH = r"yoga_standard_mp.json"
 # 使用 JSON 中正确的动作名称
-TARGET_ACTION = "Akarna_Dhanurasana"
+TARGET_ACTION = "Boat_Pose_or_Paripurna_Navasana_"
 # ===========================================
 
 # MediaPipe 官方定义的骨骼连接
@@ -27,13 +27,13 @@ def visualize_json_3d():
         with open(JSON_PATH, 'r') as f:
             data = json.load(f)
     except FileNotFoundError:
-        print(f"❌ 找不到文件: {JSON_PATH}")
+        print(f"[ERROR] 找不到文件: {JSON_PATH}")
         return
 
     # 2. 检查动作是否存在
     if TARGET_ACTION not in data:
-        print(f"❌ 动作 '{TARGET_ACTION}' 不在数据库中。")
-        print(f"✅ 数据库中包含的动作有: {list(data.keys())}")
+        print(f"[ERROR] 动作 '{TARGET_ACTION}' 不在数据库中。")
+        print(f"[INFO] 数据库中包含的动作有: {list(data.keys())}")
         if len(data.keys()) > 0:
             demo_action = list(data.keys())[0]
             print(f"-> 自动切换演示动作: {demo_action}")

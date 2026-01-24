@@ -27,7 +27,7 @@ def build_database():
     database = {}
 
     if not os.path.exists(DATA_ROOT):
-        print(f"❌ 错误：找不到数据目录 {DATA_ROOT}")
+        print(f"[ERROR] 错误：找不到数据目录 {DATA_ROOT}")
         return
 
     # 获取所有动作文件夹
@@ -105,7 +105,7 @@ def build_database():
     with open(OUTPUT_JSON, 'w') as f:
         json.dump(database, f)
 
-    print(f"✅ 标准动作库已保存至: {OUTPUT_JSON}")
+    print(f"[OK] 标准动作库已保存至: {OUTPUT_JSON}")
 
 
 if __name__ == "__main__":
